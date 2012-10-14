@@ -1,6 +1,6 @@
 <?php
 
-namespace Tom32i\UrlScannerBundle\Helpers;
+namespace Tom32i\UrlScannerBundle\Services;
 
 use Tom32i\UrlScannerBundle\Helpers\simpleHtmlDom;
 
