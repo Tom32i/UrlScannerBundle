@@ -1,0 +1,5 @@
+services:
+
+    tom32i_url_scanner:
+        class:        Tom32i\UrlScannerBundle\Services\UrlScanner
+        arguments:    []
