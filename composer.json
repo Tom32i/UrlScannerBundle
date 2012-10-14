@@ -1,5 +1,5 @@
 {
-    "name": "tom32i/url-scnanner-bundle",
+    "name": "tom32i/url-scanner-bundle",
     "type": "symfony-bundle",
     "description": "Url Scanner bundle for Symfony2",
     "keywords": ["bundle"],
