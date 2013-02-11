@@ -8,6 +8,8 @@ class UrlScanner
 {
     public static function getDataFromUrl($url)
     {
+        $url = trim($url);
+
         $return = array();
         $html = self::cUrlGet($url);
 
@@ -19,18 +21,19 @@ class UrlScanner
 
             $head_title = $dom->find('head title',0);
             $og_title = $dom->find('head meta[property=og:title]',0);
+            $h1_title = $dom->find('h1',0);
             $description = $dom->find('head meta[name=description]',0);
             $og_description = $dom->find('head meta[property=og:description]',0);
             $image = $dom->find('head meta[property=og:image]',0);
 
             if($head_title || $og_title)
             {
-                $return['title'] = $og_title ? $og_title->content : $head_title->plaintext;
+                $return['title'] = html_entity_decode($og_title ? $og_title->content : ($head_title->plaintext ? $head_title->plaintext : $h1_title->plaintext));
             }
 
             if($description || $og_description)
             {
-                $return['description'] = $og_description ? $og_description->content : $description->content;
+                $return['description'] = html_entity_decode($og_description ? $og_description->content : $description->content);
             }
             if($image)
             {
