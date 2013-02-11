@@ -2,7 +2,7 @@
 
 namespace Tom32i\UrlScannerBundle\Services;
 
-use Tom32i\UrlScannerBundle\Helpers\simple_html_dom;
+use Tom32i\UrlScannerBundle\Helpers\SimpleHtmlDom;
 
 class UrlScanner
 {
@@ -94,7 +94,7 @@ class UrlScanner
 
     public static function str_get_html($str, $lowercase = true, $forceTagsClosed = true, $target_charset = 'UTF-8', $stripRN = true, $defaultBRText = "\r\n")
     {
-        $dom = new simple_html_dom(null, $lowercase, $forceTagsClosed, $target_charset, $defaultBRText);
+        $dom = new SimpleHtmlDom(null, $lowercase, $forceTagsClosed, $target_charset, $defaultBRText);
 
         if (empty($str))
         {
