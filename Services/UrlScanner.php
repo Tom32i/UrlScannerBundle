@@ -2,7 +2,7 @@
 
 namespace Tom32i\UrlScannerBundle\Services;
 
-use Tom32i\UrlScannerBundle\Helpers\simpleHtmlDom;
+use Tom32i\UrlScannerBundle\Helpers\simple_html_dom;
 
 class UrlScanner
 {
