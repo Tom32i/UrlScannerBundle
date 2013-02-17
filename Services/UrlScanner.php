@@ -15,7 +15,7 @@ class UrlScanner
 
         $return['html'] = $html;
 
-        if($html)
+        if($html && !is_array($html))
         {
             $dom = self::str_get_html($html);
 
